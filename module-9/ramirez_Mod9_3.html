@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment for CSD 340 Module 9">
+    <meta name="author" content="Kevin Ramirez">
+    <meta name="keywords" content="HTML, CSS, Bellevue University">
+    <link rel="stylesheet" href="">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        var firstVariableValue = "Acambaro";
+        var secondVariableValue = "Guanajuato";
+        var thirdVariableValue = "chess";
+        var fourthVariableValue = "It’s a great way to relax and spend my time";
+    </script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Assignment 9.3: JavaScript - Part 1</h1>
+            <h2>Chapter Title: Getting to Know Me</h2>
+        </header>
+        <section>
+            <p class="intro">I grew up in <span id="span1">_______</span>, this is a small town in the outskirts of <span id="span2">_______</span>. My family is all situated there, they include my grandparents, parents, and cousins. I also spent most of my childhood here.</p>
+            <p>
+                <button onclick="document.getElementById('span1').innerHTML = firstVariableValue">Reveal Value1 </button>
+                <button onclick="document.getElementById('span2').innerHTML = secondVariableValue">Reveal Value2</button>
+            </p>
+        </section>
+        <section>
+            <article>
+                <p>One of my favorite hobbies is playing <span id="span3">_______</span>, which I have been doing for several years. The complexity of it keeps me intrigued. <span id="span4">_______</span>.</p>
+                <p>
+                    <button onclick="document.getElementById('span3').innerHTML = thirdVariableValue">Reveal Value3</button>
+                    <button onclick="document.getElementById('span4').innerHTML = fourthVariableValue">Reveal Value4</button>
+                </p>
+            </article>
+        </section>
+        <section>
+            <p>Outside of my hobbies, I work on projects like this one for Bellevue University and enjoy learning about technology. I really enjoy this field, I'm learning a lot from this degree and my classmates.</p>
+        </section>
+        <hr />
+        <footer>
+            <address aria-label="Bellevue University Contact Information">
+                <p><a href="https://www.bellevue.edu" aria-label="Visit Bellevue University's website">Bellevue University</a></p>
+                <p>1000 Galvin Road South</p>
+                <p>Bellevue, NE 68005</p>
+            </address>
+        </footer>
+    </div>
+</body>
+</html>
