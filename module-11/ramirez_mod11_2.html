@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <link rel="stylesheet" href="ramirez_mod11_2.css">
+</head>
+<body>
+  <h1>Assignment 11.2: JavaScript - Part 3</h1>
+  <p>To-Do list, please enter first task to add it to the list.</p>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <br>
+  <button onclick="addTask()">Add</button>
+  <button onclick="deleteLastTask()">Delete Last Entry</button>
+  <button onclick="displayTasks()">Display</button>
+  <br><br>
+  <button onclick="goBackToHome()">Back to Home</button>
+  <div id="output"></div>
+
+  <script>
+    let tasks = []; // Array to store tasks
+
+    // Add a tasks to the list that is later displayed
+    function addTask() {
+      const taskInput = document.getElementById("taskInput");
+      const task = taskInput.value.trim();
+      if (task) {
+        tasks.push(task);
+        alert(`Added: "${task}" at position ${tasks.length}`);
+        taskInput.value = ""; // Clear input
+      } else {
+        alert("Please enter a task before adding.");
+      }
+    }
+
+    // Deletes the last task from the list
+    function deleteLastTask() {
+      if (tasks.length > 0) {
+        const removedTask = tasks.pop();
+        alert(`Deleted: "${removedTask}"`);
+      } else {
+        alert("No tasks to delete.");
+      }
+    }
+
+    // Function that displays all tasks in the list
+    function displayTasks() {
+      const outputDiv = document.getElementById("output");
+      if (tasks.length > 0) {
+        outputDiv.innerHTML = tasks
+          .map((task, index) => `${index + 1}. ${task}`)
+          .join("<br>");
+      } else {
+        outputDiv.innerHTML = "No tasks to display.";
+      }
+    }
+    
+    // This is the function for the button that references index.html
+    function goBackToHome() {
+      window.location.href = "../index.html";
+    }
+  </script>
+</body>
+</html>
